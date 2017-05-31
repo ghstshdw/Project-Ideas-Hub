@@ -1,2 +1,8 @@
-# Project-Ideas-Hub
-It is safe to say that at some point in a developers life, when you're done going through tutorials and PDF's, we usually ask ourselves one question. I'm i good enough? It's only after you get a project that you realize not everything was taught in the tutorials and its back to the drawing board ;-(.  Worry not (both newbies &amp; Veterans) we have taken it upon ourselves to publish projects ranging from Beginner to Intermediate and Expert. Our goal is for you to develop the projects and use our code as a reference point in case you're stuck. :-)
+# Beta Description
+This will serve as a staging area for <b>Beta</b> commits before finally pushing to master.
+
+NB: We define <u>Beta<u/> code as code that can solve atleast half of the problems in the Project
+
+NB: Only Beta please <b>NO</b>Alpha.
+
+
