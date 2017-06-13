@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+<head>
+    <title>Unicum QR</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <!--bootstrap-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--bootsrap js-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--fontawesome-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--customcss-->
+    <link href="css/myStyle.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="qrcode.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="#">unicum Qr</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                        <ul id="login-dp" class="dropdown-menu">
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        Login via
+                                        <div class="social-buttons">
+                                            <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                            <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                                        </div>
+                                        or
+                                        <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                                <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+											 <input type="checkbox"> keep me logged-in
+											 </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="bottom text-center">
+                                        New here ? <a href="#"><b>Join Us</b></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+    <div class="container">
+        <div class="col-md-1">
+            <nav class="navbar navbar-inverse sidebar" role="navigation">
+                <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">HOME<span style="font-size:16px;" class="pull-right hidden-xs glyphicon glyphicon-home"></span></a></li>
+                    </ul>
+                </div>
+            </nav><br /><br /><br />
+            <nav class="navbar navbar-inverse sidebar" role="navigation">
+                <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#">
+                                <m>My Profile</m><span style="font-size:16px;" class="pull-right hidden-xs glyphicon glyphicon-user"></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav><br /><br /><br />
+            <nav class="navbar navbar-inverse sidebar" role="navigation">
+                <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">My Inbox <span style="font-size:16px;" class="pull-right hidden-xs glyphicon glyphicon-envelope"></span></a></li>
+                    </ul>
+                </div>
+            </nav><br /><br /><br />
+            <nav class="navbar navbar-inverse sidebar">
+                <div class="container-fluid" id="bs-sidebar-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" id="dropDownList" data-toggle="dropdown">
+                                <BUTTON onclick="document.getElementById('dropDownList').style.height = '200px';">Settings<span class="caret" style="margin-left:10px;"></span><span style="font-size:16px;" class="pull-right hidden-xs glyphicon glyphicon-cog"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Settings</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Sign Out</a></li>
+                                <li class="divider"></li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <header class="col-md-11 container text-center well">
+            <div class="row">
+                <div class="col-md-8 col-sm-12 col-lg-8" id="text">
+                    <form role="form" id="shit">
+                        <h2>Fill Below<small>to generate your qr code.</small></h2>
+                        <hr class="colorgraph">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="first_name" id="test" value="me" class="form-control " placeholder="First Name" tabindex="1">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="Last_name" class="form-control " placeholder="Last Name" tabindex="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+
+                                    <input type="text" name="kin_no" class="form-control " placeholder="Next of kin's Number" tabindex="5">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+
+                                    <select id="relationship" class="form-control">
+                                        <option>Relationship</option>
+                                        <option>Wife</option>
+                                        <option>Husband</option>
+                                        <option>Guardian</option>
+                                        <option>Daughter</option>
+                                        <option>Son</option>
+                                         <option>other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+
+                                    <select id="bloodgroup" class="form-control">
+                                        <option>Blood group</option>
+                                        <option>O</option>
+                                        <option>AB</option>
+                                        <option>A+</option>
+                                        <option>B</option>
+                                        <option>A-</option>
+                                        <option>B+</option>
+                                         
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+
+                                    <textarea class="form-control" id="allergies" placeholder="Any Allergies ?" rows="3"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <hr class="colorgraph">
+
+                    </form>
+                    <div class="row">
+
+                        <div class="col-xs-6 col-md-6"><input type="button" onclick="makeCode()" value="Create new" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+                        <div class="col-xs-6 col-md-6"><input type="button" onclick="enough()" value="delete" class="btn btn-warning btn-block btn-lg" tabindex="7"></div>
+                      
+                </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+            <p> code goes here</p><br><br>
+            <div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
+
+            
+
+
+
+
+        </div>
+        <div>
+            <p id="demo"></p>
+        </div>
+    </div>
+    </header>
+    </div>
+    <script type="text/javascript">
+var qrcode = new QRCode(document.getElementById("qrcode"), {
+	width : 200,
+	height : 200
+});
+
+function makeCode () {		
+	var elText = document.getElementById("test");
+	
+	if (!elText.value) {
+		alert("Input a text");
+		elText.focus();
+		return;
+	}
+    /*var list=[{
+
+    }
+    
+    ]
+	list.push({
+    First_Name: document.getElementById("First_Name").value,
+    Last_Name: document.getElementById("Last_Name").value,
+    Kin_no: document.getElementById("Kin_no").value,
+    allergies: document.getElementById("allergies").value
+});*/
+	qrcode.makeCode(elText.value);
+}
+
+makeCode();
+
+$("#text").
+	on("blur", function () {
+		makeCode();
+	}).
+	on("keydown", function (e) {
+		if (e.keyCode == 13) {
+			makeCode();
+		}
+	});
+</script>
+       
+        
+</body>
